@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", serif;
+    box-sizing: border-box;
+}
+body{
+    background-color:#e4e9f7;
+    display: flex;
+    justify-content: center;
+}
+.page-container{
+    margin-top: 4rem;
+    height: auto;
+    width: 50rem;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 .1rem .5rem rgba(0, 0, 0, .2);;
+    transition: .5s ease;
+}
+.page-container:hover{
+    box-shadow: 0 .1rem 2rem var(--shadow-color);
+    transform: scale(1.02);
+}
+.guidelines-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+.guidelines-container h1{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.exam-info {
+    margin-bottom: 20px;
+}
+
+.exam-info div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.instructions-container {
+    border-left: 2px solid #e5e5e5;
+    padding-left: 15px;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.instructions-content {
+    max-height: 150px;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    position: relative;
+}
+
+.instructions-content.expanded {
+    max-height: 1000px;
+}
+
+.fade-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background: linear-gradient(transparent, white);
+    pointer-events: none;
+    transition: opacity 0.3s ease-out;
+}
+
+.instructions-content.expanded + .fade-overlay {
+    opacity: 0;
+}
+
+.show-more-btn {
+    display: block;
+    margin-top: 10px;
+    color: #2563eb;
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-weight: 500;
+}
+
+.show-more-btn:hover {
+    color: #1d4ed8;
+}
+
+.instruction-item {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.instruction-item::before {
+    content: "»";
+    margin-right: 8px;
+    color: #666;
+}
+
+.section-title {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin: 15px 0;
+}
+
+/* New styles for start button and timer */
+.start-exam-container {
+    text-align: center;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.timer {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.start-btn {
+    background-color: #2563eb;
+    color: white;
+    padding: 12px 40px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.start-btn:hover:not(:disabled) {
+    background-color: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+.start-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.timer-warning {
+    color: #dc2626;
+    font-weight: 500;
+    margin-top: 10px;
+    display: none;
+}
+
+.timer-warning.visible {
+    display: block;
+}
+
+.checkbox-container {
+    margin: 15px 0;
+    text-align: left;
+    padding: 0 20px;
+}
+
+.agree-checkbox {
+    margin-right: 10px;
+}
